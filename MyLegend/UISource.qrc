@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Legend.qss</file>
+        <file>Image/Legend.jpg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,116 @@
+﻿/****************************************************
+*   @projectName    CrystalMeasurement
+*   @fileName       CrystalMeasurement.qss
+*   @brief          摘要
+*   @author         hongweiYang
+*   @date           2023年3月9日
+**************************************************/
+QWidget::focus{
+    outline:none;
+}
+
+QPushButton:focus{
+    outline:none;
+}
+
+QCheckBox:focus{
+    outline:none;
+}
+
+/**** 主界面 ****/
+QWidget#centralwidget{
+    border: 1px solid black;
+    background: rgb(189, 215, 238);
+}
+
+QWidget#widget_metricsInputBtn{
+    border: 0px;
+    background: rgb(70, 140, 150);
+}
+
+QWidget#widget_metrics{
+    background-color: rgb(70, 140, 150);
+}
+
+QWidget#tab_general, #tab_temperature, #tab_aging, #tab_inflection,
+       #tab_highTempStart, #tab_lowTempStart, #tab_powerOnReproduce, #tab_conventional,
+       #tab_commFreqModulation, #tab_qa, #tab_waveform, #tab_packageTemperature,
+       #tab_access, #tab_highLowTempInflection, #tab_punctuality, #tab_ratio,
+       #tab_initialCheck, #tab_reCheck, #tab_report, #tab_metricsCheck{
+    background-color: rgb(240, 240, 240);
+}
+
+QTabBar::tab {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        padding: 6px;
+        margin-right:2px;
+        width: 85px;
+        font: 13px;
+}
+
+QTabWidget::pane{
+        border:none;
+}
+
+QTabBar::tab:selected {
+        background-color: rgb(243, 243, 243);
+        color: rgb(70, 140, 150);
+}
+
+QTabBar::tab:!selected {
+        background-color: rgb(70, 140, 150);
+        color: rgb(255, 255, 255);
+}
+
+QTabBar::tab:hover:selected {
+        background-color: rgb(220, 220, 220);
+}
+
+QTabBar::tab:hover:!selected {
+        background-color: rgb(40, 82, 87);
+}
+
+/****** QTableView ******/
+QTableView{
+    border: 1px solid cyan;
+    gridline-color: cyan;
+    alternate-background-color: rgb(254, 229, 153);
+    background-color: rgb(197, 224, 179);
+}
+
+QHeaderView::section{
+    background-color: rgb(82, 82, 82);
+    color: cyan;
+    font: 14px "黑体";
+}
+
+/******  QLabel  *********/
+QLabel#label_databaseSta{
+    max-width: 20px;
+    max-height: 12px;
+    min-width: 20px;
+    min-height: 12px;
+    border: 2px solid rgb(128, 128, 128);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(192, 192, 192);
+}
+
+QLabel#label_databaseSta[status = 'online']{
+    border-color: rgb(0, 128, 0);
+    background-color: rgb(0, 255, 0);
+}
+
+QLabel#label_databaseSta[status = 'offline']{
+    border-color: rgb(128, 128, 128);
+    background-color: rgb(192, 192, 192);
+}
+
+QLabel#label_databaseSta[status = 'error']{
+    border-color: rgb(180, 0, 0);
+    background-color: rgb(255, 0, 0);
+}
+
